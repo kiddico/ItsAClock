@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	  <meta charset="UTF-8">
+	  <title>it's a clock</title>
+	</head>
+
+	<body translate="no" >
+		<font face="Consolas" size="512px">
+			<div id="output"></div>
+		</font>
+	  
+		<script>
+			var output = document.getElementById("output");
+
+			var c;
+			setInterval(
+			c = function() {
+				var currentDate = new Date();
+				var time = currentDate.toTimeString().split(" GMT")[0]
+				output.innerText = time;
+			}, 1000);
+			c();
+	  </script>
+	  
+	</body>
+</html>
